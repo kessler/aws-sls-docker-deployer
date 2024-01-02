@@ -17,5 +17,5 @@ echo "re-installing node modules..."
 rm -rf node_modules
 npm install --omit=dev
 echo "npm install complete"
-ls -la node_modules
-#sls deploy $@
+
+sls deploy $@
