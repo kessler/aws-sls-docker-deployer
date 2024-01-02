@@ -1,0 +1,14 @@
+FROM public.ecr.aws/amazonlinux/amazonlinux:latest
+
+RUN yum update -y
+
+# install node
+RUN yum install https://rpm.nodesource.com/pub_18.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+RUN yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
+
+RUN npm install -g serverless
+RUN sls slstats --disable
+
+COPY deploy-node.sh ./
+RUN chmod +x deploy-node.sh
+ENTRYPOINT ["./deploy-node.sh"]
