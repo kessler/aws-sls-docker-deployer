@@ -1,6 +1,7 @@
 FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 
 RUN yum update -y
+RUN yum install -y make git gcc-c++
 
 # install node
 RUN yum install https://rpm.nodesource.com/pub_18.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y

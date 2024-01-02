@@ -13,5 +13,9 @@ fi
 
 echo "sls params are: \"$@\""
 cd /app
+echo "re-installing node modules..."
+rm -rf node_modules
 npm install --omit=dev
-sls deploy $@
+echo "npm install complete"
+ls -la node_modules
+#sls deploy $@
