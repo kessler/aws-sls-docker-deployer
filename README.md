@@ -1,6 +1,6 @@
 # aws-sls-docker-deployer
 
-Creates docker images to deploy serverless lambdas to aws linux. This is good for when you have native deps that needs to be compiled to aws linux before they are used.
+Creates docker images to deploy serverless lambdas to aws linux. This is good for when you have native deps that need to be compiled to aws linux before they are used.
 
 Basically, runs `npm install` / `pipenv install` inside the container and then runs `serverless deploy`
 
